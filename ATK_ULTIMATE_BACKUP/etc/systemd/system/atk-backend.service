@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn daemon for ATK Flask API
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/var/www/ATK_NEW/backend
+Environment="PATH=/var/www/ATK_NEW/backend/venv/bin"
+ExecStart=/var/www/ATK_NEW/backend/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5555 --error-logfile /var/www/ATK_NEW/backend/logs/error.log app:app
+
+[Install]
+WantedBy=multi-user.target
