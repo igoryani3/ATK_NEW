@@ -1,0 +1,20 @@
+.git
+**/.DS_Store
+
+# Frontend
+frontend/node_modules
+frontend/.next
+frontend/out
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Backend
+backend/venv
+backend/__pycache__
+backend/**/*.pyc
+backend/logs
+backend/*.log
+
+# Local data (keep in runtime volume)
+backend/instance

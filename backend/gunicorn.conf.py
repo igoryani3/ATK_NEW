@@ -5,9 +5,9 @@ worker_connections = 1000
 timeout = 120
 keepalive = 5
 
-# Logging
-accesslog = "/var/www/atk_transit/backend/logs/access.log"
-errorlog = "/var/www/atk_transit/backend/logs/error.log"
+# Logging (containers: stdout/stderr)
+accesslog = "-"
+errorlog = "-"
 loglevel = "info"
 
 # Process naming
@@ -15,4 +15,4 @@ proc_name = "atk-transit"
 
 # Server mechanics
 daemon = False
-pidfile = "/var/www/atk_transit/backend/gunicorn.pid"
+pidfile = None
